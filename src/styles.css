@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 20px;
   padding: 0;
 }
@@ -50,15 +50,13 @@ ul {
   box-sizing: border-box;
 }
 
-body {
-  font-family: sans-serif;
-  margin: 20px;
-  padding: 0;
+button {
+  border-radius: 5px;
 }
 
 .square {
   background: #fff;
-  border: 1px solid #999;
+  border: 2px solid #999;
   float: left;
   font-size: 60px;
   font-weight: bold;
@@ -69,6 +67,7 @@ body {
   padding: 0;
   text-align: center;
   width: 60px;
+  border-radius: 10px; /* Rounded edges for squares */
 }
 
 .board-row:after {
@@ -83,6 +82,10 @@ body {
 .game {
   display: flex;
   flex-direction: row;
+  background-color: #e6f2ff; /* Colored background for game area */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .game-info {
@@ -99,4 +102,26 @@ body {
 
 .o-color {
   color: red;
+}
+
+/* Alternating colors for history buttons */
+.game-info ol li:nth-child(even) button {
+  background-color: white;
+}
+
+.game-info ol li:nth-child(odd) button {
+  background-color: lightgray;
+}
+
+/* Title styling */
+.game-title {
+  font-size: 36px;
+  font-weight: bold;
+  background-color: lightgrey;
+  color: #003366; /* Different color from background */
+  text-align: left;
+  margin-bottom: 10px;
+  width: 100%;
+  border-radius: 10px;
+  text-indent: 20px;
 }
